@@ -17,3 +17,8 @@ tuple1 = ("red","green","yellow")
 # #delete
 # del tuple1
 # print(tuple1)
+
+
+#How do you convert a tuple to a list
+# a = list((my_tuple))
+# print(a)
