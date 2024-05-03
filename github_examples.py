@@ -199,9 +199,9 @@ dict1={'a':1,'b':2,'c':3,'d':4}
 # dict1.pop('a')
 # print(dict1)
 
-#Write a Python program to merge two dictionaries.
+# #Write a Python program to merge two dictionaries.
 # dict2={'e':5,'f':6,'g':7}
-# dict1.update(dict2)
+# dict1.update(dict2)  
 # print(dict1)
 
 
