@@ -38,14 +38,14 @@ list_comprehension = [x**2 for x in mylist1]
 # print(list_comprehension)
 
 #loop through index number
-for i in range(len(colours)):
-    print(colours[i])
+# for i in range(len(colours)):
+#     print(colours[i])
 
-while loop
-i = 0
-while i<len(colours):
-    print(colours[i])
-    i=i+1
+# while loop
+# i = 0
+# while i<len(colours):
+#     print(colours[i])
+#     i=i+1
 
 
 # Create a new list that only contains the even numbers from an existing list.

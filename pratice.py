@@ -1,192 +1,128 @@
-# Copy a list and demonstrate the difference between a shallow copy and a deep copy.
-# Check if all elements in a list are the same.
-# Rotate a list to the right by 3 positions.
-# Split a list into two lists, one containing the first half and the other containing the second half.
+# Explain what happens if you try to modify the third item in the tuple t = (1, 2, 3, 4, 5) to 10 with a code snippet.
+# Return the sum of all elements in a tuple of numbers.
+# Calculate the total number of items in the tuple t = (1, (2, 3, 4), 5, (6, 7)).
+# Return a new tuple containing only unique elements from two input tuples.
+
+# Create a tuple with values (10, 20, 30, 40, 50) and print the second item.
+mytuple = (10, 20, 30, 40, 50)
+x = mytuple[1]
+# print(x)
 
 
-mylist = [1,2,3,4,5,6,7,8,9,10]
+# Print the last three items of the tuple t = (5, 10, 15, 20, 25, 30) using slicing.
+t = (5, 10, 15, 20, 25, 30)
+y = t[-3:]
+# print(y)
 
-mylist.append(11)
+# Write a function that takes a tuple and returns its length.
+def myfunction(leng):
+    return len(leng)
 
-mylist.insert(0,0)
-
-mylist.remove(5)
-
-mylist.pop(3)
-
-first_element = mylist[0]
-last_element = mylist[-1]
-# print(first_element)
-# print(last_element)
+leng = (5, 10, 15, 20, 25, 30)
+# print(myfunction(leng))
 
 
-sub_list = mylist[2:6]
-# print(sub_list)
+# Concatenate the tuples t1 = (1, 2, 3) and t2 = (4, 5, 6) to form a new tuple.
+t1 = (1, 2, 3)
+t2 = (4, 5, 6)
 
-negative = mylist[-2]
-# print(negative)
-
-reverse = mylist[::-1]
-# print(reverse)
-
-# Create a new list that contains every second element from the original list.
-mylist1 = [1,2,3,4,5,6,7,8,9,10]
-new_list = mylist1[1::2]
-# print(new_list)
-
-list_comprehension = [x**2 for x in mylist1]
-# print(list_comprehension)
+t3 = t1 +t2
+# print(t3)
 
 
-# Create a new list that only contains the even numbers from an existing list.
-evennumber_list = []
-for x in mylist1:
-    if x%2==0 :
-        evennumber_list.append(x)
-# print(evennumber_list)
+# Print the second item of the second nested tuple in t = (1, (2, 3), 4, (5, 6, 7)).
+t4 = (1, (2, 3), 4, (5, 6, 7))
+second_item = t4[3][1]
+# print(second_item)
 
-evennumber_list = [x for x in mylist1 if x%2==0]
-# print(evennumber_list)
+
+# Unpack the tuple t = ('John', 'Doe', 25, 'Engineer') into four variables and print them.
+t5 = ('John', 'Doe', 25, 'Engineer')
+
+first_name ,last_name ,age ,role = t5
+
+# print(first_name)
+# print(last_name)
+# print(age)
+# print(role)
 
 
 
 
-# print(mylist)
+# Check if the value 20 exists in the tuple t = (10, 20, 30, 40, 50).
+# if 20 in t:
+#     print("yes")
+# else:
+#     print("no")
 
 
-# Concatenate two lists [1, 2, 3] and [4, 5, 6].
-list1 = [1, 2, 3]
-list2 = [4, 5, 6]
 
-list1.extend(list2)
+# Find the index of the value 3 in the tuple t = (1, 2, 3, 4, 5).
+
+f = t3.index(3)
+# print(f)
+
+
+# Convert the tuple t = ('a', 'b', 'c', 'd') into a string.
+t6 = ('a', 'b', 'c', 'd')
+convert = ''.join(t6)
+# print(convert)
+
+
+
+
+# Create a tuple with one item, 50, and print its type to confirm it's a tuple.
+t7 = (50,)
+# print(type(t7))
+
+
+
+
+# Return the maximum and minimum values in a tuple of integers.
+
+max_value = mytuple[0]
+min_value = mytuple[0]
+
+for num in mytuple:
+    if  num > max_value:
+        max_value = num
+    if  num < min_value:
+        min_value = num
+
+# print(max_value)
+# print(min_value)
+
+
+# Print each tuple in the list list_of_tuples = [(1, 2), (3, 4), (5, 6)].
+list_of_tuples = [(1, 2), (3, 4), (5, 6)]
+
+# for x in list_of_tuples:
+#     print(x)
+
+
+#Convert a list into a tuple.
+list_of_tupless = [1, 2, 3, 4, 5, 6]
+
+converting = tuple(list_of_tupless)
+# print(converting)
+
+
+# Reverse the tuple t = (1, 2, 3, 4, 5).
+rever = t3[::-1]
+# print(rever)
+
+
+# Convert the tuple t = (1, 2, 3, 4, 5) into a list.
+t9 = (1, 2, 3, 4, 5)
+list1 = list(t9)
 # print(list1)
 
 
-# Check if the number 7 is in the list.
-if 7 in mylist1:
-    print("yes")
-else:
-    print("no")
 
 
-# Sort the list in ascending order.
-mylist1.sort()
-# print(mylist1)    
+new_tuple =()
+for x in t9:
+    if x%2==0:
+        new_tuple += (x,)
 
-# Sort the list in descending order.
-# mylist1.sort(reverse=True)
-# print(mylist1)
-
-# Find the index of the first occurrence of the number 3 in the list.
-index_of_3 = mylist1.index(3)
-# print(index_of_3)
-
-
-
-# Remove duplicates from a list while preserving the order.
-mylist2 = [1,2,2,3,4,4,4,5,5,6,7,8,9,9,9]
-unique_list = []
-for x in mylist2:
-    if x not in unique_list:
-        unique_list.append(x)
-# print(unique_list)
-
-
-# Iterate over a list and print each element.
-# for x in mylist1:
-    # print(x)
-
-# Use enumerate() to iterate over a list and print the index and element.
-
-# for index,element in enumerate(mylist1):
-    # print(index,element)
-
-
-
-
-# Use map() to create a new list with the squares of all elements in an existing list.
-
-def square(x):
-    return x ** 2
-
-my_list = [1, 2, 3, 4, 5]
-
-squared_list = list(map(square, my_list))
-# squared_numbers = list(map(lambda x: x ** 2, my_list))
-# print("List with squares of elements:", squared_list)
-
-
-
-
-# Given a nested list [[1, 2], [3, 4], [5, 6]], access the element 4.
-nested_list = [[1, 2], [3, 4], [5, 6]]
-
-new_list1 = nested_list[1][1]
-# print(new_list1)
-
-
-
-
-# Flatten a nested list [[1, 2], [3, 4], [5, 6]] into a single list [1, 2, 3, 4, 5, 6].
-single_list =  []
-
-for x in nested_list :
-    single_list.extend(x)
-# print(single_list)
-
-
-
-
-# Combine two lists [1, 2, 3] and [4, 5, 6] into a list of tuples [(1, 4), (2, 5), (3, 6)].
-tuple_list = [(list1[i], list2[i]) for i in range(min(len(list1), len(list2)))]
-# print(tuple_list)
-
-
-
-
-# Use the zip() function to combine two lists into a list of tuples.
-tuple_list2 = list((zip(list1,list2)))
-# print(tuple_list2)
-
-
-
-# Use filter() to create a new list that only contains elements greater than 5.
-filtered_list = list(filter(lambda x: x > 5, mylist1))
-
-# print("Filtered list:", filtered_list)
-
-
-
-
-
-# Find the maximum and minimum values in a list.
-#we can also use max() and min()function
-my_list3 = [10, 5, 20, 8, 15]
-
-maximum_value = my_list3[0]
-minimum_value = my_list3[0]
-
-
-for x in my_list3:
-    if x > maximum_value:
-        maximum_value = x
-    if x < minimum_value:
-        minimum_value = x
-
-# print("Maximum value:", maximum_value)
-# print("Minimum value:", minimum_value)
-
-
-
-
-
-# Given a list of integers, create a new list with each element incremented by 1.
-incremented_list = [x+1 for x in my_list3]
-# print(incremented_list)
-
-
-
-# Find the second largest number in a list.
-mylist1.sort(reverse=True)
-print(mylist1[1])
-
+print(new_tuple)
